@@ -1,0 +1,19 @@
+{
+    "name": "azure-functions-nodejs-jwt-auth",
+    "version": "1.0.0",
+    "description": "Azure Functions with Node.js and JWT Auth",
+    "author": {
+        "name": "Yusuf F. Adiputera",
+        "email": "yfa.adiputera@gmail.com"
+    },
+    "scripts": {
+        "start": "func start --javacript",
+        "test": "echo \"No tests yet...\""
+    },
+    "dependencies": {
+        "@azure/functions": "^4.0.0",
+        "jsonwebtoken": "9.0.2"
+    },
+    "devDependencies": {},
+    "main": "src/functions/*.js"
+}
