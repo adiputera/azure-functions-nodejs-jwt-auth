@@ -15,9 +15,9 @@ app.http('auth', {
                 const jwtSecretKey = `${process.env['jwt_secret_key']}`;
                 const jwtExpiresIn = parseInt(`${process.env['jwt_expire_time']}`);
                 if (savedClientSecret
-                    && savedClientSecret === clientSecret
-                    && jwtSecretKey
-                    && jwtExpiresIn) {
+                        && savedClientSecret === clientSecret
+                        && jwtSecretKey
+                        && jwtExpiresIn) {
                     const token = jwt.sign({
                         client_id: clientId,
                         token_type: 'Bearer'

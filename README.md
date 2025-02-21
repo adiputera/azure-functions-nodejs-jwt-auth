@@ -22,7 +22,7 @@ This project is an Azure Functions application that implements JWT (JSON Web Tok
 - All the client ID & client secret are stored in environment variables. For local testing, check [local.settings.json](local.settings.json).
 To add new client ID, just add new entries in the environment variables, the key would be the client ID, and the value would be client secret.
 - JWT secret key is stored in environment variables as `jwt_secret_key`
-- JWT expired time is stored in environment variales as `jwt_expire_time`
+- JWT expired time is stored in environment variables as `jwt_expire_time`
 
 ### Running the Application
 To start the application, execute:
