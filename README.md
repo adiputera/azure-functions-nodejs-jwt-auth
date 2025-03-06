@@ -31,10 +31,24 @@ To start the application, execute:
     ```
 
 ## Usage
-- **Authentication Endpoint**: [POST] `/api/auth?client_id=${cliendID}&client_secret=${clientSecret}`
-    ```bash
-    curl --location --request POST 'http://localhost:7071/api/auth?client_id=test_client&client_secret=XX0VmfQAk0awWwoBEQSi'
-    ```
+- **Authentication Endpoint**: 
+You can choose one of the 3 authentication endpoint below
+    - [POST] `/api/auth?client_id=${cliendID}&client_secret=${clientSecret}`
+        ```bash
+        curl --location --request POST 'http://localhost:7071/api/auth?client_id=test_client&client_secret=XX0VmfQAk0awWwoBEQSi'
+        ```
+    - [POST] `/api/auth-body`
+        ```bash
+        curl --location 'http://localhost:7071/api/auth-body' \
+        --header 'Content-Type: application/x-www-form-urlencoded' \
+        --data-urlencode 'client_id=test_client' \
+        --data-urlencode 'client_secret=XX0VmfQAk0awWwoBEQSi'
+        ```
+    - [POST] `/api/auth-header`
+        ```bash
+        curl --location --request POST 'http://localhost:7071/api/auth-header' \
+        --header 'Authorization: Basic base64(${clientId}:${clientSecret})'
+        ```
     the response for correct client ID and client secret:
     ```json
     {
